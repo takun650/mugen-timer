@@ -1,27 +1,45 @@
 const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
 const minutesSpan = document.getElementById('minutes');
 const secondsSpan = document.getElementById('seconds');
 const roundInfo = document.getElementById('roundInfo');
 
 const startSound = document.getElementById('startSound');
 const finishSound = document.getElementById('finishSound');
-const finalSound = document.getElementById('finalSound');  // 10回目用の音声
+const finalSound = document.getElementById('finalSound');
 
 let countdown;
 let interval;
-let totalRounds = 10;  // 合計で10回繰り返す
-let currentRound = 0;
-let countdownDuration = 60;  // 60秒間カウントダウン
-let intervalDuration = 2;    // 2秒インターバル
+let currentRound = 0; // ラウンド回数は無制限でカウントアップ
+let countdownDuration = 20 * 60; // 20分（1200秒）ごとにアラーム
+let remainingTime;      // 残り時間
+let isStopped = false;  // ストップ状態を管理する変数
+let totalElapsedTime = 0;  // 累計の経過時間を保存
+
+// 累計の経過時間を更新して表示する関数
+function updateElapsedTime() {
+    const elapsedMinutes = Math.floor(totalElapsedTime / 60);
+    const elapsedSeconds = totalElapsedTime % 60;
+    minutesSpan.textContent = String(elapsedMinutes).padStart(2, '0');
+    secondsSpan.textContent = String(elapsedSeconds).padStart(2, '0');
+}
 
 function startCountdown() {
-    let remainingTime = countdownDuration;
-    roundInfo.textContent = `ラウンド ${currentRound + 1} / ${totalRounds}`;
+    if (!remainingTime) {
+        remainingTime = countdownDuration;  // 残り時間がない場合は初期値をセット
+    }
+
+    roundInfo.textContent = `ラウンド ${currentRound + 1}`; // ラウンド表示を更新
 
     // カウントダウンスタート時に音を鳴らす
     startSound.play();
 
     countdown = setInterval(() => {
+        if (isStopped) {
+            clearInterval(countdown);  // ストップ時はカウントダウンを止める
+            return;
+        }
+
         const minutes = Math.floor(remainingTime / 60);
         const seconds = remainingTime % 60;
 
@@ -31,38 +49,31 @@ function startCountdown() {
         if (remainingTime === 0) {
             clearInterval(countdown);
 
-            // 最終ラウンドかどうかで鳴らす音を分ける
-            if (currentRound === totalRounds - 1) {
-                finalSound.play();  // 10サイクル目には別の音を鳴らす
-                alert("すべてのラウンドが完了しました！");
-            } else {
-                finishSound.play();
-                currentRound++;
-                startInterval();
-            }
-        } else {
-            remainingTime--;
-        }
-    }, 1000);
-}
+            // アラームを鳴らす
+            finishSound.play();
 
-function startInterval() {
-    let remainingInterval = intervalDuration;
-    roundInfo.textContent = "インターバル中...";
-    
-    interval = setInterval(() => {
-        if (remainingInterval === 0) {
-            clearInterval(interval);
+            // ラウンドを増やし、再びカウントを開始する
+            currentRound++;
+            totalElapsedTime += countdownDuration;  // 累計経過時間を更新
+            updateElapsedTime();  // 累計経過時間を表示
+            remainingTime = countdownDuration;  // 20分のカウントダウンを再スタート
             startCountdown();
         } else {
-            remainingInterval--;
+            remainingTime--;
+            totalElapsedTime++;  // 累計時間を1秒ずつ更新
         }
     }, 1000);
 }
 
+// スタートボタンの動作
 startButton.addEventListener('click', () => {
+    isStopped = false;  // ストップ状態を解除
     clearInterval(countdown);  // スタートを押すたびにタイマーをリセット
-    clearInterval(interval);
-    currentRound = 0;
-    startCountdown();
+    startCountdown();  // 残り時間から再開
+});
+
+// ストップボタンの動作
+stopButton.addEventListener('click', () => {
+    isStopped = true;  // ストップ状態にする
+    clearInterval(countdown);  // カウントダウンを停止
 });
