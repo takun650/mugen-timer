@@ -21,6 +21,7 @@
     font-size: 8rem;
     text-align: center;
     margin-top: 5px;
+    line-height: 0.8;  /* フォントの縦方向の余白を調整 */
     color: #333; /* ダークグレーでクールな雰囲気 */
 }
 
