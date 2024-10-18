@@ -1,7 +1,7 @@
 #title {
-    font-family: 'Pacifico', cursive;  /* 筆記体のクールなフォント */
+    font-family: 'Lobster', cursive;  /* インパクトのある筆記体 */
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;  /* タイトルをより大きく */
     margin-top: 100px;
     color: #333; /* ダークグレーでクールな雰囲気 */
 }
@@ -24,7 +24,7 @@
 #elapsedTime {
     text-align: center;
     font-size: 2rem; /* 累計の経過時間を強調 */
-    margin-top: 20px;
+    margin-top: 20px; /* ストップボタンの下に余白を追加 */
     color: #FF5722; /* 明るいオレンジで経過時間を強調 */
 }
 
