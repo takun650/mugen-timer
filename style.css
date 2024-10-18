@@ -8,22 +8,29 @@
 }
 
 
-#roundInfo {
-    text-align: center;
-    font-size: 1.5rem; /* ラウンド情報を少し大きめにして視認性をアップ */
-    margin-top: 10px;
-    margin-bottom: 0;  /* 下方向のマージンを削除 */
-    color: #555; /* 少し薄めのダークグレーでクールな雰囲気 */
-}
-
 #countdown {
     font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
     font-size: 8rem;
     text-align: center;
     margin-top: 5px;
     line-height: 0.8;  /* フォントの縦方向の余白を調整 */
-    color: #333; /* ダークグレーでクールな雰囲気 */
+    color: #fff;  /* 文字色を白に */
+    background-color: #333;  /* 背景をダークグレーに */
+    padding: 10px;  /* 少し余白を持たせる */
+    border-radius: 10px; /* 角を少し丸める */
 }
+
+#roundInfo {
+    text-align: center;
+    font-size: 1.5rem; /* ラウンド情報を少し大きめにして視認性をアップ */
+    margin-top: 10px;
+    margin-bottom: 0;  /* 下方向のマージンを削除 */
+    color: #fff;  /* 文字色を白に */
+    background-color: #555;  /* 背景を中間のグレーに */
+    padding: 5px 10px;  /* 余白を調整 */
+    border-radius: 5px; /* 角を少し丸める */
+}
+
 
 #elapsedTime {
     font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
