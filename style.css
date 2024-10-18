@@ -12,10 +12,10 @@
     background-color: #333;  /* 共通の背景色 */
     color: #fff;  /* 文字色を白に */
     text-align: center;
-    padding: 20px;  /* 余白を追加して内部を広く */
-    border-radius: 10px;  /* 角を少し丸める */
+    padding: 10px 20px 20px 20px;  /* 上だけ10px、左右と下は20px */
     margin-top: 10px;  /* 上方向に少し余白を追加 */
 }
+
 
 #countdown {
     font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
@@ -39,7 +39,7 @@
 
 button {
     display: block;
-    margin: 50px auto;
+    margin: 30px auto; /* ボタン間の余白を30pxに設定 */
     padding: 15px 30px; /* ボタンを大きくして操作しやすくする */
     font-size: 1.5rem;
     color: #fff; /* 白で文字を目立たせる */
@@ -49,6 +49,19 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+/* ストップボタンのスタイルを反転 */
+#stopButton {
+    background-color: #fff; /* 背景を白に */
+    color: #333; /* 文字色をダークグレーに */
+    border: 2px solid #333; /* ボーダーをつけることでより明確に */
+}
+
+#stopButton:hover {
+    background-color: #333; /* ホバー時に背景色をダークグレーに */
+    color: #fff; /* 文字色を白に反転 */
+}
+
 
 button:hover {
     background-color: #FF5722; /* ホバー時にオレンジで強調 */
