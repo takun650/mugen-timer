@@ -8,29 +8,26 @@
 }
 
 
+#timerContainer {
+    background-color: #333;  /* 共通の背景色 */
+    color: #fff;  /* 文字色を白に */
+    text-align: center;
+    padding: 20px;  /* 余白を追加して内部を広く */
+    border-radius: 10px;  /* 角を少し丸める */
+    margin-top: 10px;  /* 上方向に少し余白を追加 */
+}
+
 #countdown {
     font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
     font-size: 8rem;
-    text-align: center;
-    margin-top: 20px;
     line-height: 0.8;  /* フォントの縦方向の余白を調整 */
-    color: #fff;  /* 文字色を白に */
-    background-color: #333;  /* 背景をダークグレーに */
-    padding: 10px;  /* 少し余白を持たせる */
-    border-radius: 10px; /* 角を少し丸める */
+    margin: 0;  /* カウントダウンとラウンドの間の余白をなくす */
 }
 
 #roundInfo {
-    text-align: center;
     font-size: 1.5rem; /* ラウンド情報を少し大きめにして視認性をアップ */
-    margin-top: 10px;
-    margin-bottom: 0;  /* 下方向のマージンを削除 */
-    color: #fff;  /* 文字色を白に */
-    background-color: #555;  /* 背景を中間のグレーに */
-    padding: 5px 10px;  /* 余白を調整 */
-    border-radius: 5px; /* 角を少し丸める */
+    margin-top: 5px;  /* 上方向のマージンを少しにする */
 }
-
 
 #elapsedTime {
     font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
