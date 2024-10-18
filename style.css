@@ -12,6 +12,7 @@
     text-align: center;
     font-size: 1.5rem; /* ラウンド情報を少し大きめにして視認性をアップ */
     margin-top: 10px;
+    margin-bottom: 0;  /* 下方向のマージンを削除 */
     color: #555; /* 少し薄めのダークグレーでクールな雰囲気 */
 }
 
