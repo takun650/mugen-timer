@@ -27,7 +27,7 @@
     text-align: center;
     font-size: 2rem; /* 累計の経過時間を強調 */
     margin-top: 20px; /* ストップボタンの下に余白を追加 */
-    color: #FF5722; /* 明るいオレンジで経過時間を強調 */
+    color: #333; /* 明るいオレンジで経過時間を強調 */
 }
 
 button {
@@ -49,7 +49,7 @@ button:hover {
 
 #description {
     text-align: center;
-    margin: 100px auto;
+    margin: 10px auto;
     font-size: 1rem;
     color: #666; /* 説明文を少し淡いグレーにして目立ちすぎないように */
     max-width: 600px;
