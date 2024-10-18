@@ -47,7 +47,7 @@ button:hover {
 
 #description {
     text-align: center;
-    margin: 100px;
+    margin: 100px auto;
     font-size: 1rem;
     color: #666; /* 説明文を少し淡いグレーにして目立ちすぎないように */
     max-width: 600px;
