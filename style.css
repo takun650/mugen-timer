@@ -27,6 +27,7 @@
     font-size: 8rem;
     line-height: 0.6;  /* フォントの縦方向の余白を調整 */
     margin: 0;  /* カウントダウンとラウンドの間の余白をなくす */
+    padding-bottom: 20px;  /* 下方向にパディングを追加 */
 }
 
 #elapsedTime {
