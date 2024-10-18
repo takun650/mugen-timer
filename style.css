@@ -2,7 +2,7 @@
     font-family: 'Noto Serif JP', serif;  /* 日本語用のフォント */
     text-align: center;
     font-size: 2rem;  /* タイトルを大きくしてインパクトを出す */
-    margin-top: 100px;
+    margin-top: 50px;
     color: #333; /* ダークグレーでクールな雰囲気 */
     letter-spacing: 0.05em; /* 文字間を少し広げて読みやすく */
 }
