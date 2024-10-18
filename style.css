@@ -25,9 +25,10 @@
 }
 
 #elapsedTime {
+    font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
     text-align: center;
     font-size: 2rem; /* 累計の経過時間を強調 */
-    margin-top: 20px; /* ストップボタンの下に余白を追加 */
+    margin-top: 10px; /* ストップボタンの下に余白を追加 */
     color: #333; /* 明るいオレンジで経過時間を強調 */
 }
 
