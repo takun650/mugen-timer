@@ -1,7 +1,7 @@
 #title {
     font-family: 'Noto Serif JP', serif;  /* 日本語用のフォント */
     text-align: center;
-    font-size: 4rem;  /* タイトルを大きくしてインパクトを出す */
+    font-size: 2rem;  /* タイトルを大きくしてインパクトを出す */
     margin-top: 100px;
     color: #333; /* ダークグレーでクールな雰囲気 */
     letter-spacing: 0.05em; /* 文字間を少し広げて読みやすく */
@@ -17,9 +17,9 @@
 
 #countdown {
     font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
-    font-size: 6rem;
+    font-size: 8rem;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 5px;
     color: #333; /* ダークグレーでクールな雰囲気 */
 }
 
@@ -32,7 +32,7 @@
 
 button {
     display: block;
-    margin: 40px auto;
+    margin: 30px auto;
     padding: 15px 30px; /* ボタンを大きくして操作しやすくする */
     font-size: 1.5rem;
     color: #fff; /* 白で文字を目立たせる */
