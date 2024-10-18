@@ -2,15 +2,7 @@
     font-family: 'Lobster', cursive;  /* インパクトのある筆記体 */
     text-align: center;
     font-size: 4rem;  /* タイトルをより大きく */
-    margin-top: 50px;
-    color: #333; /* ダークグレーでクールな雰囲気 */
-}
-
-#countdown {
-    font-family: 'Pacifico', cursive;  /* 筆記体のクールなフォント */
-    font-size: 6rem;
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     color: #333; /* ダークグレーでクールな雰囲気 */
 }
 
@@ -19,6 +11,14 @@
     font-size: 1.5rem; /* ラウンド情報を少し大きめにして視認性をアップ */
     margin-top: 10px;
     color: #555; /* 少し薄めのダークグレーでクールな雰囲気 */
+}
+
+#countdown {
+    font-family: 'Pacifico', cursive;  /* 筆記体のクールなフォント */
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 30px;
+    color: #333; /* ダークグレーでクールな雰囲気 */
 }
 
 #elapsedTime {
