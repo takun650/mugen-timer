@@ -1,7 +1,7 @@
 #title {
     font-family: 'Noto Serif JP', serif;  /* 日本語用のフォント */
     text-align: center;
-    font-size: 2rem;  /* タイトルを大きくしてインパクトを出す */
+    font-size: 4rem;  /* タイトルを大きくしてインパクトを出す */
     margin-top: 50px;
     color: #333; /* ダークグレーでクールな雰囲気 */
     letter-spacing: 0.05em; /* 文字間を少し広げて読みやすく */
@@ -13,20 +13,20 @@
     color: #fff;  /* 文字色を白に */
     text-align: center;
     padding: 10px 20px 20px 20px;  /* 上だけ10px、左右と下は20px */
-    margin-top: 10px;  /* 上方向に少し余白を追加 */
+    margin-top: 20px;  /* 上方向に少し余白を追加 */
 }
 
+#roundInfo {
+    font-family: 'Noto Serif JP', serif;  /* 日本語用のフォント */
+    font-size: 1.5rem; /* ラウンド情報を少し大きめにして視認性をアップ */
+    margin-top: 5px;  /* 上方向のマージンを少しにする */
+}
 
 #countdown {
     font-family: 'Lobster', cursive;  /* 筆記体のクールなフォント */
     font-size: 8rem;
-    line-height: 0.8;  /* フォントの縦方向の余白を調整 */
+    line-height: 0.6;  /* フォントの縦方向の余白を調整 */
     margin: 0;  /* カウントダウンとラウンドの間の余白をなくす */
-}
-
-#roundInfo {
-    font-size: 1.5rem; /* ラウンド情報を少し大きめにして視認性をアップ */
-    margin-top: 5px;  /* 上方向のマージンを少しにする */
 }
 
 #elapsedTime {
@@ -34,7 +34,7 @@
     text-align: center;
     font-size: 2rem; /* 累計の経過時間を強調 */
     margin-top: 10px; /* ストップボタンの下に余白を追加 */
-    color: #333; /* 明るいオレンジで経過時間を強調 */
+    color: #333; /* グレー */
 }
 
 button {
